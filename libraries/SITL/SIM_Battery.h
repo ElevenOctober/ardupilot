@@ -36,6 +36,7 @@ public:
     void consume_energy(float attempted_current_amp, uint64_t now_us);
 
     float get_voltage(void) const { return voltage_filter.get(); }
+    float get_max_voltage(void) const { return max_voltage; }
     float get_capacity(void) const { return capacity_Ah; }
     float get_temperature_degC(void) const { return temperature_degC; }
     bool capacity_is_unlimited(void) const { return !(is_positive(capacity_Ah)); } // for readability
